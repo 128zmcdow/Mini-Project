@@ -13,4 +13,19 @@ console.log('Total Amount due:' + totalBill.toFixed(2))
 //Paycheck Calculator
 let totalHours = 12;
 let hourlyWage = 15.92;
-let payCheck = 
+let payCheck = totalHours * hourlyWage;
+ console.log('Paycheck Amount:' + payCheck)
+
+ //Grade Calculator
+let pointsEarned = 75;
+let totalPoints = 100;
+let gradeFinal = pointsEarned / totalPoints
+console.log('Grade:' + gradeFinal.toFixed(2))
+
+ //Gas Cost Calculator
+ let gasCost = 4.79;
+ let tripMiles = 75;
+ let milesGallon = 25;
+ let gallons = tripMiles / milesGallon
+ let totalCost = gallons * gasCost
+ console.log('Total Trip Cost:' + totalCost.toFixed(2))
