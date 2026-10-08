@@ -49,16 +49,20 @@ gradeBtn.addEventListener('click', function () {
     // Grade Calculator Variables
     let pointsEarned = document.getElementById('pointsEarnedInput').valueAsNumber;
     let totalPoints = document.getElementById('totalPointsInput').valueAsNumber;
-    let gradeFinal;
+    let percentGrade;
 
-    // Do the Math
-    gradeFinal = pointsEarned / totalPoints
 
-    // Only show 2 decimal places
-    gradeFinal = gradeFinal.toFixed(2);
+    // Do the math
+    percentGrade = pointsEarned / totalPoints;
 
-    // Show the Output
-    gradeOutput.innerHTML = gradeFinal + "%";
+
+    // Change to Percent instead of Decimal
+    percentGrade = Math.round(percentGrade * 100);
+
+
+    // Show the output
+    gradeOutput.innerHTML = percentGrade + "%";
+
 })
 
 let gasBtn = document.getElementById("gasButton");
