@@ -5,6 +5,7 @@ let checkOutput = document.getElementById('paycheckAmountOutput');
 let gradeOutput = document.getElementById('percentGradeOutput');
 let gasOutput = document.getElementById('gasCostOutput');
 let diceOutput = document.getElementById('diceOutput')
+let userNameOutput = document.getElementById('userNameOutput')
 
 
 let tipBtn = document.getElementById("tipButton");
@@ -122,5 +123,26 @@ dieBtn.addEventListener('click', function () {
     // Show the output
     diceOutput.innerHTML = numberRolled;
 
+
+})
+
+
+let userBtn = document.getElementById("userButton")
+userBtn.addEventListener('click', function () {
+
+    // User Name Variables
+    let firstName = document.getElementById('userNameInput').value;
+    let favoriteGame = document.getElementById('favoriteGameInput').value;
+    let randomNumber;
+    let finalName;
+
+    // math 2
+    randomNumber = Math.floor(Math.random() * 698);
+
+    // Do the math
+    finalName = firstName + favoriteGame + randomNumber;
+
+    // Show the output
+    userNameOutput.innerHTML = finalName;
 
 })
